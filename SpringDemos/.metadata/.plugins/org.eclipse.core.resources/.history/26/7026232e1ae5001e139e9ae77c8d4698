@@ -1,0 +1,25 @@
+package com.spring.auto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ShapeFactory {
+	
+	@Autowired
+	IShape shape;
+
+	public IShape getShape() {
+		return shape;
+	}
+
+	public void setShape(IShape shape) {
+		this.shape = shape;
+	}
+	
+	void printArea(int a, int b) {
+		System.out.println("Printing area");
+		shape.area(a, b);
+	}
+	
+}

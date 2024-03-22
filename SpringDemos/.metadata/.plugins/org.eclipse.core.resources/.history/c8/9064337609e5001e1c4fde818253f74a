@@ -1,0 +1,17 @@
+package com.spring.setter;
+
+public class Employee {
+	private String empName;
+	private Integer empId;
+	
+	public Employee() {
+		super();
+	}
+	
+	public Employee(String empName, Integer empId) {
+		super();
+		this.empName = empName;
+		this.empId = empId;
+	}
+	
+}

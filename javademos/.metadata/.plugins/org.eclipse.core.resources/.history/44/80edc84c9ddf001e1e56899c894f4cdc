@@ -1,0 +1,67 @@
+package com.bookapp.testcases;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.CALLS_REAL_METHODS;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+
+import com.bookapp.model.Book;
+import com.bookapp.service.IBookService;
+import com.bookapp.service.OrderDetails;
+
+class OrderDetailsTestCases {
+
+	@Mock
+	IBookService bookService;
+	
+	@InjectMocks
+	OrderDetails orderDetails;
+	
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	Book book1, book2, book3, book4, book5, book6;
+	List<Book> booksList;
+	@BeforeEach
+	void setUp() throws Exception {
+		orderDetails = new OrderDetails();
+		book1 = new Book(1,"Java","Kathy", 1900);
+		book2 = new Book(2,"Spring","Kathy", 800);
+		book3 = new Book(3,"Java","Joe", 800);
+		book4 = new Book(4,"LeaderShip","Kathy", 1800);
+		book5 = new Book(5,"Java","Kathy", 800);
+		book6 = new Book(6,"Miracle","Kathy", 800);
+		booksList = Arrays.asList(book1, book2, book3, book4, book5, book6);
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		orderDetails = null;
+	}
+
+	@Test
+	void testShowBooks() {
+		String author = "Kathy";
+		List<Book> bookByAuthor = Arrays.asList(book1, book2, book4, book5, book6);
+		Mockito.when(bookService.getByAuthor(author)).thenReturn(bookByAuthor);
+		List<Book> expected = Arrays.asList(book5, book1, book4, book6, book2);
+		List<Book> actual = orderDetails.showBooks(author);
+		assertEquals(expected, actual);
+	}
+
+}

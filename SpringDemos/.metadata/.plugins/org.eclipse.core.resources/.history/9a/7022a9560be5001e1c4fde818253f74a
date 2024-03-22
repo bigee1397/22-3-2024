@@ -1,0 +1,14 @@
+package com.spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.spring.setter.Employee;
+
+public class App {
+	public static void main(String[] args) {
+		ApplicationContext appCon = new AnnotationConfigApplicationContext("com.spring");
+		Employee employee = (Employee) appCon.getBean("employee");
+		System.out.println(employee);
+	}
+}

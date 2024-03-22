@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+</head>
+<body>
+    <fieldset>
+        <legend align="center">Employee Details</legend>
+        <table border="1">
+            <tr>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>Jo</td>
+                <td rowspan="2" >admin</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Kevin</td>
+                <!-- <td>admin</td> -->
+                <td>4000</td>
+            </tr>
+            <tr>
+                <td>Jeeva</td>
+                <td>Dev</td>
+                <td rowspan="2">10000</td>
+            </tr>
+            <tr>
+                <td>Raja</td>
+                <td>Dev</td>
+                <!-- <td>10000</td> -->
+            </tr>
+            <tr>
+                <td>Anu</td>
+                <td rowspan="2" >Manager</td>
+                <td>40000</td>
+            </tr>
+            <tr>
+                <td>Deva</td>
+                <!-- <td>Manager</td> -->
+                <td>50000</td>
+            </tr>   
+            <tr>
+                <td colspan="3">Total Employees: 6</td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

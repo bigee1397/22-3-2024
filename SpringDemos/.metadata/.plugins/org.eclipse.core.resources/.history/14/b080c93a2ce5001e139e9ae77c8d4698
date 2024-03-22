@@ -1,0 +1,20 @@
+package com.assignments.constructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Performer {
+	
+	@Autowired
+	@Qualifier
+	IInstrument instrument;
+	
+	void playMusic(String choice, String song) {
+		if(choice.equals("v"))
+			instrument.play(song);
+		if(choice.equals("g"))
+			instrument.play(song);
+		if(choice.equals("k"))
+			instrument.play(song);
+	}
+	
+}

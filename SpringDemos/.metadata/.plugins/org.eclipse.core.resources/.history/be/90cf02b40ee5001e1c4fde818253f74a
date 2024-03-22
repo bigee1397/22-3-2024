@@ -1,0 +1,12 @@
+package com.spring.constructor;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Course {
+	@Value("Java FSD")
+	private String courseName;
+	@Value("35000.0")
+	private double fees;
+}

@@ -1,0 +1,36 @@
+package com.assignments.food;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Waiter {
+	
+	@Autowired
+	@Qualifier("chinese")
+	IFoodMenu foodMenu;
+	
+	@Autowired
+	IFoodMenu indian;
+	
+	IFoodMenu chinese;
+	public Waiter(IFoodMenu chinese) {
+		super();
+		this.chinese = chinese;
+	}
+
+
+	List<String> viewMenus(String choice) {
+		if(choice.equals("c")) 
+			return foodMenu.showMenu();
+		if(choice.equals("i")) 
+			return indian.showMenu();
+		if(choice.equals("m")) 
+			return chinese.showMenu();
+		return null;
+	}
+	
+}

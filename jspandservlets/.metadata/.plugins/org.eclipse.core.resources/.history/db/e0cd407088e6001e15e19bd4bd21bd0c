@@ -1,0 +1,24 @@
+package com.doctorapp.repository;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.doctorapp.model.Doctor;
+
+public class DoctorMapper implements RowMapper<Doctor> {
+
+	@Override
+	public Doctor mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Doctor doctor = new Doctor();
+			doctor.setConsultationFees(rs.getDouble("consultation_fee"));
+			doctor.setDoctorId(rs.getInt("doctor_id"));
+			doctor.setDoctorName(rs.getString("doctor_name"));
+			doctor.setExperience(rs.getInt("experience"));
+			doctor.setRatings(rs.getInt("ratings"));
+			doctor.setSpeciality(rs.getString("speciality"));
+		return doctor;
+	}
+
+}

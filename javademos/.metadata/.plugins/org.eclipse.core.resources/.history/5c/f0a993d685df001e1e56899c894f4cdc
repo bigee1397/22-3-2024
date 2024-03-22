@@ -1,0 +1,7 @@
+package com.voya.training;
+
+public class TestRunner {
+	public static void main(String[] args) {
+		Result res = JUnitCore.runClasses()
+	}
+}

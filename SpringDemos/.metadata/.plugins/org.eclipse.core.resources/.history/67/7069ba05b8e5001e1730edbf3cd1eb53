@@ -1,0 +1,25 @@
+package com.example.food;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	@Bean
+	Chinese getChinese() {
+		return new Chinese();
+	}
+
+    @Bean
+    Indian getIndian() {
+        return new Indian();
+    }
+	
+	@Bean
+	Mexican getMexican() {
+		return new Mexican();
+	}
+	
+}

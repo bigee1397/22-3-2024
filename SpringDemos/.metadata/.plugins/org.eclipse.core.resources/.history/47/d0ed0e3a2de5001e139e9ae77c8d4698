@@ -1,0 +1,16 @@
+package com.assignments.constructor;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.assignments.setter.Vehicle;
+
+public class InstrumentApp {
+	public static void main(String[] args) {
+		ApplicationContext appContext = new AnnotationConfigApplicationContext("com.assignments.constructor");
+		
+		Performer performer = (Performer) appContext.getBean("guitar");
+		performer.playMusic("v", "Violing from Idarammalytho");
+		
+	}
+}

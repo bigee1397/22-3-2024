@@ -1,0 +1,9 @@
+package com.security.config;
+
+public class WebConfig {
+
+	public WebConfig() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

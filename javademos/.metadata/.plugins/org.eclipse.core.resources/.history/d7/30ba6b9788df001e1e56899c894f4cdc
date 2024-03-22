@@ -1,0 +1,18 @@
+package com.voya.sample;
+
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.platform.suite.api.IncludePackages;
+import org.junit.platform.suite.api.SelectClasses;
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+import com.voya.testcases.trial.*;
+
+@RunWith(Suite.class) // JUnit 4
+@SelectPackages({"com.voya"})
+@IncludePackages({"com.voya.testcases"})
+@SuiteClasses({CalculatorTest.class})
+public class AllTests {
+	
+}

@@ -1,0 +1,5 @@
+package com.voya.exceptions;
+
+public class InvalidNumException {
+
+}

@@ -1,0 +1,33 @@
+h1{
+    background-color: aqua;
+    text-transform: uppercase;
+}
+p {
+    color: red;
+    letter-spacing: 3px;
+}
+div > p {
+    color: blue;
+    letter-spacing: 0;
+    background-color: white;
+}
+strong {
+    color: salmon;
+    background-color: white;
+}
+strike {
+    background-color: white;
+    font-size: larger;
+    color: violet;
+    text-transform: uppercase;
+}
+body {
+    background-color: aquamarine;
+    background-image: url("../images/09a2f63d-646e-49ac-b539-86551500fd57.jfif");
+    background-attachment: scroll;
+    background-size: contain;
+    background-repeat: repeat;
+}
+h2.myclass {
+    
+}

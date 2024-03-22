@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+td {
+	padding:15px;
+}
+th {
+	padding:15px;
+}
+div {
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-between;
+}
+div > h1, div > a{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+div.indexHeader {
+	display: flex;
+	flex-direction: row-reverse;
+}
+div.indexHeader > a {
+	padding-right: 20px;
+}

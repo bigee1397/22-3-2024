@@ -1,0 +1,13 @@
+package com.spring.auto;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class ShapeApp {
+	public static void main(String[] args) {
+		ApplicationContext appCon = new AnnotationConfigApplicationContext("com.spring.auto");
+		ShapeFactory shapeFactory = (ShapeFactory) appCon.getBean("shapefactory");
+		shapeFactory.printArea(5, 6);
+	}
+	
+}

@@ -1,0 +1,9 @@
+package com.insuranceapp.service;
+
+public class AppUserServiceImpl {
+
+	public AppUserServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

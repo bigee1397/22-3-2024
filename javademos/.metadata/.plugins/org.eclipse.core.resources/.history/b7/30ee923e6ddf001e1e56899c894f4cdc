@@ -1,0 +1,53 @@
+package com.voya.testcases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import com.voya.training.Calculator;
+
+class CalculatorTest {
+	Calculator calculator = null;
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		System.out.println("called before all the testcases");
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+		System.out.println("called after all the testcases");
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		calculator = new Calculator();
+		System.out.println("called before each testcases");
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		calculator = null;
+		System.out.println("called after each testcases");
+	}
+
+	@Test
+	@DisplayName("Testing sum method")
+	void testSum() {
+		int actual = calculator.sum(10,20);
+	    assertEquals(30, actual, "Expecting 30 but got diff value" );
+	}
+	
+	@Test
+	@DisplayName("Testing sum method")
+	void testProduct() {
+		int actual = calculator.product(10,2);
+	    assertEquals(20, actual, "Expecting 20 but got diff product value" );
+	}
+
+}

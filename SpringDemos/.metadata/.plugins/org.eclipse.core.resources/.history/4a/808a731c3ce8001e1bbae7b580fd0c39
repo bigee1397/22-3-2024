@@ -1,0 +1,10 @@
+package com.insuranceapp.model;
+
+public class AppUser {
+
+	private String username;
+	private Integer userId;
+	private String password;
+	private String email;
+
+}

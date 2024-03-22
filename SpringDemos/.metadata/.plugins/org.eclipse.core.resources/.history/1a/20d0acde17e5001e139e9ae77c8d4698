@@ -1,0 +1,7 @@
+package com.spring.auto;
+
+public class ShapeApp {
+	public static void main(String[] args) {
+		
+	}
+}

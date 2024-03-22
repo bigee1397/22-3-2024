@@ -1,0 +1,13 @@
+package com.insuranceapp.model;
+
+import java.time.LocalDateTime;
+
+public class ApiErrors {
+
+	private String message;
+	private LocalDateTime localDateTime;
+	private int statusCode;
+	private String error;
+	private HttpStatus status;
+
+}

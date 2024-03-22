@@ -1,0 +1,15 @@
+package com.insuranceapp.repository;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.insuranceapp.model.Insurance;
+
+@Mapper
+public interface IInsuranceRepository {
+	
+	void addInsurance(Insurance insurance);
+	void updateInsurance(int insuranceId, double premium);
+	void deletInsurance(int insuranceId);
+	
+	
+}

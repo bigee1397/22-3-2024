@@ -1,0 +1,9 @@
+package com.insuranceapp.model;
+
+public class AppUserMapper {
+
+	public AppUserMapper() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

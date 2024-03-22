@@ -1,0 +1,9 @@
+package com.insuranceapp.service;
+
+import org.springframework.security.provisioning.UserDetailsManager;
+
+public class AppUserServiceImpl implements UserDetailsManager {
+
+	
+
+}

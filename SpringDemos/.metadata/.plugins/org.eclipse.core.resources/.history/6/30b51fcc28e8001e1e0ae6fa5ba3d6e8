@@ -1,0 +1,9 @@
+package com.security.controller;
+
+public class GreetController {
+
+	public GreetController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

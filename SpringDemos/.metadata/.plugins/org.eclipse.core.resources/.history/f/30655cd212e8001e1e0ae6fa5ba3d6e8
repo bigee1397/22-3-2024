@@ -1,0 +1,9 @@
+package com.insuranceapp.model;
+
+public class ApiErrors {
+
+	public ApiErrors() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,28 @@
+<%@page import="java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		pageContext.setAttribute("message", "welcome");
+		request.setAttribute("message", "welcome to request");
+		session.setAttribute("message", "welcome to session");
+		application.setAttribute("message", "welcome to application");
+	%>
+	
+	<h2>Using Scripting</h2>
+	${message } <br>
+	${requestScope.message } <br>
+	${sessionScope.message } <br>
+	${applicationScope.message } <br>
+	
+	
+	<% List<String> fruits = Arrays.asList("","","","",""); %>
+	
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.assignments.food;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Waiter {
+	
+	@Autowired
+	IFoodMenu foodMenu;
+	
+	
+}

@@ -1,0 +1,9 @@
+package com.insuranceapp.repository;
+
+public class IAppUserRepository {
+
+	public IAppUserRepository() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

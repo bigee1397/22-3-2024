@@ -1,0 +1,10 @@
+package com.spring.auto;
+
+public class Reactangle implements IShape {
+
+	@Override
+	public void area(int x, int y) {
+		System.out.println("Area of a rectangle " + (x*y));
+	}
+	
+}

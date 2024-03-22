@@ -1,0 +1,15 @@
+package com.movieapp.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class MovieDetails {
+	public static List<String> showMovieDetails(String language) {
+		List<String> hollywood = Arrays.asList();
+		List<String> bollywood = Arrays.asList();
+		List<String> tollywood = Arrays.asList();
+		List<String> sandalwood = Arrays.asList();
+		
+		return null;
+	}
+}

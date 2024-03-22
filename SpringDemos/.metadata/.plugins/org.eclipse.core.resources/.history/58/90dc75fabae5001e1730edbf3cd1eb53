@@ -1,0 +1,48 @@
+package com.example.food;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+
+public class Waiter {
+	
+	@Autowired
+	@Qualifier("getIndian")
+	IFoodMenu foodMenu;
+	
+	@Autowired
+	IFoodMenu indian;
+	
+	IFoodMenu mexicana;
+	public Waiter(IFoodMenu mexicana) {
+		super();
+		this.mexicana = mexicana;
+	}
+
+	public Waiter() {
+		// TODO Auto-generated constructor stub
+	}
+	public IFoodMenu getFoodMenu() {
+		return foodMenu;
+	}
+	public void setFoodMenu(IFoodMenu foodMenu) {
+		this.foodMenu = foodMenu;
+	}
+
+
+	public List<String> viewMenus(String choice) {
+		List<String> menus = new ArrayList<>();
+		if(choice.equals("c")) 
+			menus =  foodMenu.showMenu();
+		if(choice.equals("i")) 
+			menus =  indian.showMenu();
+		if(choice.equals("m")) 
+			menus =  mexicana.showMenu();
+		return menus;
+	}
+	
+}

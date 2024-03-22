@@ -1,0 +1,7 @@
+package com.assignments.food;
+
+public class FoodApp {
+	public static void main(String[] args) {
+		
+	}
+}

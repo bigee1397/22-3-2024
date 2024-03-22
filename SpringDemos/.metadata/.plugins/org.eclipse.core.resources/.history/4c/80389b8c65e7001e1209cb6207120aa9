@@ -1,0 +1,12 @@
+package com.insuranceapp.model;
+
+public class Insurance {
+
+	private Integer insuranceId;
+	private String policyName;
+	private String brand;
+	private String type;
+	private int duration;
+	private double premium;
+	
+}

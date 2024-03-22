@@ -1,0 +1,30 @@
+package com.example;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.auto.ShapeFactory;
+
+@SpringBootApplication
+public class SpringBootAutowireApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootAutowireApplication.class, args);
+	}
+
+	
+	@Autowired
+	ShapeFactory shapeFactory;
+	
+	@Autowired
+	Waiter waiter;
+	
+	
+	@Override
+	public void run(String... args) throws Exception {
+		shapeFactory.printArea("s", 4,5);
+	}
+
+}

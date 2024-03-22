@@ -1,0 +1,4 @@
+student.studName = "Bhargav"
+student.department = "CSE"
+student.course.courseName = "Java Full Stack Development"
+student.course.fees = "30000.00"

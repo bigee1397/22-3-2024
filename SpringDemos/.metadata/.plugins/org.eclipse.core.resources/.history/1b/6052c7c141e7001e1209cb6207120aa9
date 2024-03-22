@@ -1,0 +1,10 @@
+package com.productapp.service;
+
+import com.productapp.model.Product;
+
+public interface IProductService {
+
+	Product addProduct(Product product);
+	Product updateProduct(Product product);
+	
+}

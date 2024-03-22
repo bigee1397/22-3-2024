@@ -1,0 +1,18 @@
+package com.assignments.food;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Waiter {
+	
+	@Autowired
+	@Qualifier("chinese")
+	IFoodMenu foodMenu;
+	
+	List<String> viewMenus(String choice) {
+		if(choice.equals("c")) return foodMenu.showMenu();
+	}
+	
+}

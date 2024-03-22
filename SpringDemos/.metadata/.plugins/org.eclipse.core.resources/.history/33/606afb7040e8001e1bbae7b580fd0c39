@@ -1,0 +1,22 @@
+package com.insuranceapp.model;
+
+//import java.util.List;
+//
+//import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+@Component
+public class AppUserMapper {
+
+	public AppUser convertToAppUser(UserDetails userDetails) {
+		String username = userDetails.getUsername();
+		String password = userDetails.getPassword();
+//		List<GrantedAuthority> authorities = (List<GrantedAuthority>) userDetails.getAuthorities();
+		AppUser appUser = new AppUser();
+		appUser.setUsername(username);
+		appUser.setPassword(password);
+		return appUser;
+	}
+
+}

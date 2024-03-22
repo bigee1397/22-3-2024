@@ -1,0 +1,9 @@
+package com.assignments.food;
+
+public class Waiter {
+	
+	@Autowired
+	IFoodMenu foodMenu;
+	
+	
+}
